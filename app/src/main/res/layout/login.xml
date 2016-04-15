@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:padding="0dip"
+    android:id="@+id/layout1" android:background="#FFFFFF"
+    android:weightSum="1"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/banner"
+        android:layout_weight="1.18">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Usuario"
+            android:id="@+id/tv_Usuario"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:singleLine="true"
+            android:id="@+id/et_Usuario"
+            android:background="@drawable/edittext_rounded_corners"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Contraseña"
+            android:id="@+id/tv_contrasenia" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:password="true"
+            android:ems="10"
+            android:id="@+id/et_contrasenia"
+            android:background="@drawable/edittext_rounded_corners"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Ingresar"
+            android:id="@+id/bt_Ingresar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="30dp"
+        android:background="#333">
+
+        <TextView
+            android:id="@+id/tv_olvidaPass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Cuál es mi contraseña?"
+            android:gravity="top|center"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="40dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

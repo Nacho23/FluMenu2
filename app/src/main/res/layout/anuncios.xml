@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="50dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/banner"
+        android:layout_weight="1.20"
+        android:id="@+id/linearLayout">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Texto"
+            android:id="@+id/tvTexto"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#333"
+            android:paddingBottom="15dp"
+            android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:background="#333"
+        android:padding="25dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btAnterior"
+            android:id="@+id/btAnterior"
+            android:layout_alignTop="@+id/btSiguiente"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btSiguiente"
+            android:id="@+id/btSiguiente"
+            android:layout_below="@+id/tvTexto"
+            android:layout_toRightOf="@+id/btAnterior"
+            android:layout_toEndOf="@+id/btAnterior"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
