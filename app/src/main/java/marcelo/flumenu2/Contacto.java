@@ -53,15 +53,22 @@ public class Contacto extends AppCompatActivity
     private EditText mensaje_p;
     private TextView cont_Letras;
 
+    String rut;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contacto);
 
+        Bundle extras = getIntent().getExtras();
+        rut = extras.getString("user");
+
         bt_enviar = (Button)findViewById(R.id.bt_enviar);
         rut_p = (EditText)findViewById(R.id.et_rut);
         mensaje_p = (EditText)findViewById(R.id.et_mensaje);
         cont_Letras = (TextView)findViewById(R.id.tv_contLetras);
+
+        rut_p.setText(rut);
 
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);*/

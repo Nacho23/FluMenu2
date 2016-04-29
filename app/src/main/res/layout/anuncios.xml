@@ -20,7 +20,6 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="113dp"
-        android:layout_centerHorizontal="true"
         android:layout_weight="1"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp">
@@ -30,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text=""
             android:id="@+id/tvTexto"
-            android:textSize="16dp"
+            android:textSize="18sp"
             android:fontFamily="sans-serif-medium"
             android:textColor="#333"
             android:paddingBottom="15dp"
@@ -40,23 +39,23 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0">
 
         <Spinner
-            android:layout_width="250dp"
-            android:layout_height="match_parent"
+            android:layout_width="240dp"
+            android:layout_height="fill_parent"
             android:id="@+id/spinner_request"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:spinnerMode="dialog"
             android:background="#ccc"/>
 
         <Button
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
+            android:layout_width="145dp"
+            android:layout_height="fill_parent"
             android:text="Enviar Respuesta"
             android:layout_gravity="right"
             android:gravity="center"

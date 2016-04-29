@@ -119,6 +119,7 @@ public class Principal extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_contacto) {
             Intent i = new Intent(Principal.this, Contacto.class);
+            i.putExtra("user", user);
             startActivity(i);
         } else if (id == R.id.nav_info) {
 
