@@ -28,13 +28,40 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Texto"
+            android:text=""
             android:id="@+id/tvTexto"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:fontFamily="sans-serif-medium"
             android:textColor="#333"
             android:paddingBottom="15dp"
             android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0">
+
+        <Spinner
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spinner_request"
+            android:layout_gravity="left"
+            android:spinnerMode="dialog"
+            android:background="#ccc"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:text="Enviar Respuesta"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:id="@+id/btn_SendRequest"
+            android:background="#a4a4a4"/>
 
     </LinearLayout>
 
@@ -68,6 +95,7 @@
             android:layout_toEndOf="@+id/btAnterior"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"/>
+
     </LinearLayout>
 
 
