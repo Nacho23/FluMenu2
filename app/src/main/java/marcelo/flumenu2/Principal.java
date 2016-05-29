@@ -2,8 +2,7 @@ package marcelo.flumenu2;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -11,11 +10,13 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
+
 
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,14 +24,20 @@ public class Principal extends AppCompatActivity
     String user;
     TextView txt_user, logoff;
     ImageButton anuncio;
-
+    private static final String TAG = "Principal";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);*/
+
+        FirebaseMessaging.getInstance().subscribeToTopic("news");
+        Log.d(TAG, "Subscribed to news topic");
+
+        Log.d(TAG, "InstanceID token: " + FirebaseInstanceId.getInstance().getToken());
 
         txt_user = (TextView) findViewById(R.id.textView_nombre);
         logoff = (TextView) findViewById(R.id.textView_logoff);
@@ -92,6 +99,8 @@ public class Principal extends AppCompatActivity
         }
         return super.onKeyDown(keyCode, event);
     }
+
+
 
 
     /*@Override

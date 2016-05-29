@@ -1,43 +1,42 @@
 {
   "project_info": {
-    "project_id": "infobafuachv1",
-    "project_number": "495431727804",
-    "name": "infoBafuachV1"
+    "project_number": "688422616864",
+    "firebase_url": "https://info-bafuach-ccc00.firebaseio.com",
+    "project_id": "info-bafuach-ccc00",
+    "storage_bucket": "info-bafuach-ccc00.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:495431727804:android:f3b9496fa43aabaa",
-        "client_id": "android:package.infoBafuachV1",
-        "client_type": 1,
+        "mobilesdk_app_id": "1:688422616864:android:5ade2d5eaa4c30de",
         "android_client_info": {
-          "package_name": "package.infoBafuachV1",
-          "certificate_hash": []
+          "package_name": "marcelo.flumenu2"
         }
       },
-      "oauth_client": [],
-      "api_key": [],
+      "oauth_client": [
+        {
+          "client_id": "688422616864-u74km0e0noiadlbr27p32riu4o0tkms7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChFAfQcpcUVLEKbc4ALxde4IVXewCLkRI"
+        }
+      ],
       "services": {
         "analytics_service": {
           "status": 1
-        },
-        "cloud_messaging_service": {
-          "status": 2,
-          "apns_config": []
         },
         "appinvite_service": {
           "status": 1,
           "other_platform_oauth_client": []
         },
-        "google_signin_service": {
-          "status": 1
-        },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
   ],
-  "client_info": [],
-  "ARTIFACT_VERSION": "1"
+  "configuration_version": "1"
 }
