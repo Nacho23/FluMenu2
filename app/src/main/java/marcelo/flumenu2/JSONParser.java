@@ -26,7 +26,7 @@ public class JSONParser {
     // default no argument constructor for jsonpaser class
     public JSONParser() {
     }
-    public JSONObject getJSONFromUrl(final String url) {
+    public String getStringFromUrl(final String url) {
         // Making HTTP request
         try {
             DefaultHttpClient httpClient = new DefaultHttpClient();
@@ -59,13 +59,7 @@ public class JSONParser {
             Log.e("Error", " something wrong with converting result " + e.toString());
         }
         // Try block used for pasrseing String to a json object
-        try {
-            jsonObj = new JSONObject(json);
-        }
-        catch (JSONException e) {
-            Log.e("json Parsering", "" + e.toString());
-        } // Returning json Object.
-        return jsonObj;
+        return json;
     }
     public JSONObject makeHttpRequest(String url, String method, List<NameValuePair> params) {
         // Make HTTP request
@@ -83,8 +77,10 @@ public class JSONParser {
             else if(method == "GET"){
                 // request method is GET
                 DefaultHttpClient httpClient = new DefaultHttpClient();
-                String paramString = URLEncodedUtils.format(params, "utf-8");
-                url += "?" + paramString;
+                if(params != null) {
+                    String paramString = URLEncodedUtils.format(params, "utf-8");
+                    url += "?" + paramString;
+                }
                 HttpGet httpGet = new HttpGet(url);
                 HttpResponse httpResponse = httpClient.execute(httpGet);
                 HttpEntity httpEntity = httpResponse.getEntity();
