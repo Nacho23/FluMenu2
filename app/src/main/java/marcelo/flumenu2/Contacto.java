@@ -48,6 +48,7 @@ import java.util.List;
 public class Contacto extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private String user;
     private Button bt_enviar;
     private EditText rut_p;
     private EditText mensaje_p;
@@ -62,6 +63,7 @@ public class Contacto extends AppCompatActivity
 
         Bundle extras = getIntent().getExtras();
         rut = extras.getString("user");
+        user = extras.getString("user");
 
         bt_enviar = (Button)findViewById(R.id.bt_enviar);
         rut_p = (EditText)findViewById(R.id.et_rut);
@@ -175,8 +177,9 @@ public class Contacto extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_inicio) {
-            Intent i = new Intent(Contacto.this, Principal.class);
-            startActivity(i);
+            finish();
+            //Intent i = new Intent(Contacto.this, Principal.class);
+            //startActivity(i);
         } else if (id == R.id.nav_contacto) {
 
         } else if (id == R.id.nav_info) {

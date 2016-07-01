@@ -65,6 +65,12 @@
             android:id="@+id/et_contrasenia"
             android:background="@drawable/edittext_rounded_corners"/>
 
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recordar Usuario"
+            android:id="@+id/cbRemember" />
+
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

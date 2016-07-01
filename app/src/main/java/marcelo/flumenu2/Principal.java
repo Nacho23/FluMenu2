@@ -82,7 +82,7 @@ public class Principal extends AppCompatActivity
         logoff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Cerrar sesion y regresa a la ventana anterior
+                //Cerrar sesion
                 finish();
 
             }
