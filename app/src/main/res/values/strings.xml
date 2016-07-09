@@ -29,4 +29,9 @@
 
     <string name="action_settings">Settings</string>
     <string name="msje_hint_contacto">Escribe aquí el mensaje</string>
+    <string name="tv_dialog_title">info-BAFUACh</string>
+    <string name="tv_dialog_description">App de uso exclusivo del Ballet Folcklórico de la Universidad Austral de Chile</string>
+    <string name="tv_dialog_contact_1">Marcelo Torres - marcelotorres23.mt@gmail.com</string>
+    <string name="tv_dialog_contact_2">Daniel Molina - correodeMolinaQueNoMeLoSe@gmail.com</string>
+    <string name="tv_dialog_name">Fingers © 2016</string>
 </resources>

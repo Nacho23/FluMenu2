@@ -1,5 +1,6 @@
 package marcelo.flumenu2;
 
+import android.app.Dialog;
 import android.content.Entity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -72,8 +73,8 @@ public class Contacto extends AppCompatActivity
 
         rut_p.setText(rut);
 
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         mensaje_p.addTextChangedListener(new TextWatcher() {
             @Override
@@ -102,7 +103,7 @@ public class Contacto extends AppCompatActivity
         /*Despliega Menu Lateral*/
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_contact);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -183,7 +184,9 @@ public class Contacto extends AppCompatActivity
         } else if (id == R.id.nav_contacto) {
 
         } else if (id == R.id.nav_info) {
-
+            Dialog dialog = new Dialog(Contacto.this);
+            dialog.setContentView(R.layout.dialog_acercade);
+            dialog.show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_contact);

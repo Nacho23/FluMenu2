@@ -17,14 +17,14 @@
         android:padding="0dp"
         android:layout_marginBottom="0dp"
         android:background="@drawable/banner"
-        android:layout_weight="1">
+        android:layout_weight="0.03">
 
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.1">
+        android:layout_weight="0.005">
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_weight="0"
-        android:padding="40dp">
+        android:padding="30dp">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -75,9 +75,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:padding="30dp"
-        android:layout_marginTop="-15dp"
-        android:background="#333">
+        android:padding="50dp"
+        android:layout_marginTop="-1dp"
+        android:background="#333"
+        android:layout_weight="0.00">
 
         <TextView
             android:layout_width="wrap_content"

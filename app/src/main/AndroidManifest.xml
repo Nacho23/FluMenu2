@@ -35,9 +35,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Principal" />
-        <activity android:name=".Anuncios" />
-        <activity android:name=".Contacto" />
+        <activity android:name=".Principal"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Anuncios"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Contacto"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <service
             android:name=".MyFirebaseMessagingService">

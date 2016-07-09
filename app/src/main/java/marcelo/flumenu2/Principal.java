@@ -1,9 +1,11 @@
 package marcelo.flumenu2;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -54,8 +56,8 @@ public class Principal extends AppCompatActivity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         FirebaseMessaging.getInstance().subscribeToTopic("news");
         Log.d(TAG, "Subscribed to news topic");
@@ -99,7 +101,7 @@ public class Principal extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -196,7 +198,9 @@ public class Principal extends AppCompatActivity
             i.putExtra("user", user);
             startActivity(i);
         } else if (id == R.id.nav_info) {
-
+            Dialog dialog = new Dialog(Principal.this);
+            dialog.setContentView(R.layout.dialog_acercade);
+            dialog.show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

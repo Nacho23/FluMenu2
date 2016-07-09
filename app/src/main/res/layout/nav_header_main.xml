@@ -30,7 +30,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ballet Folclórico Universidad Austral de Chile"
+        android:text="Ballet Folclórico UACh"
         android:textColor="#e4e4e4" />
 
 </LinearLayout>

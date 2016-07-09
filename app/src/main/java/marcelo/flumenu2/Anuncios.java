@@ -80,7 +80,8 @@ public class Anuncios extends Activity implements View.OnClickListener {
                 try{
                     if(id_evento != 0){
                         Post post = new Post();
-                        JSONArray datos = post.getServerData(params,"http://bafuach.esy.es/android/enviarRespuesta.php");
+                        //JSONArray datos = post.getServerData(params,"http://bafuach.esy.es/android/enviarRespuesta.php");
+                        JSONArray datos = post.getServerData(params,"http://localhost/webpage-BAFUACh/android/enviarRespuesta.php");
                         if(datos != null && datos.length() > 0){
                             Toast.makeText(getBaseContext(), "No se pudo enviar la respuesta", Toast.LENGTH_SHORT).show();
                         }
